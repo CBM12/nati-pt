@@ -1,47 +1,73 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Nati | Personal Trainer</title>
-
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f5f3ef">
+  <meta name="description" content="Entrenamiento personalizado con Natalia Jara, Personal Trainer certificada en Levantamiento Olímpico y Box Training System.">
+  <meta property="og:title" content="Natalia Jara | NATcoach">
+  <meta property="og:description" content="Entrenamiento personalizado enfocado en fuerza, técnica y bienestar.">
+  <title>Natalia Jara | Personal Trainer</title>
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: #f5f5f5;
-      text-align: center;
-    }
-
-    .card {
-      background: white;
-      padding: 40px 25px;
-      border-radius: 20px;
-      width: 85%;
-      max-width: 380px;
-    }
-
-    h1 {
-      margin-bottom: 5px;
-    }
-
-    p {
-      color: #666;
-    }
+    :root { --ink:#191a18; --muted:#6f706b; --paper:#f5f3ef; --card:#fff; --accent:#d86b32; --line:#e7e2da; }
+    * { box-sizing: border-box; }
+    html { background: var(--paper); }
+    body { margin:0; min-height:100svh; color:var(--ink); background:var(--paper); font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; -webkit-font-smoothing:antialiased; }
+    body::before { content:""; position:fixed; inset:0; pointer-events:none; background:radial-gradient(circle at 85% 8%,rgba(216,107,50,.09),transparent 30rem); }
+    main { width:min(100%,30rem); min-height:100svh; margin:auto; padding:max(2rem,env(safe-area-inset-top)) 1.25rem max(1.5rem,env(safe-area-inset-bottom)); display:flex; align-items:center; }
+    .card { width:100%; padding:2.1rem 1.5rem 1.35rem; background:rgba(255,255,255,.92); border:1px solid rgba(255,255,255,.9); border-radius:1.75rem; box-shadow:0 1.5rem 4rem rgba(31,29,25,.09); text-align:center; }
+    .logo { display:block; width:9rem; max-height:4.25rem; margin:0 auto 2.2rem; object-fit:contain; }
+    .eyebrow { margin:0 0 .65rem; color:var(--accent); font-size:.72rem; font-weight:700; letter-spacing:.19em; text-transform:uppercase; }
+    h1 { margin:0; font-family:Georgia,"Times New Roman",serif; font-size:clamp(2.25rem,10vw,3rem); font-weight:400; letter-spacing:-.045em; line-height:1; }
+    .role { margin:.6rem 0 1.35rem; color:var(--muted); font-size:.82rem; font-weight:600; letter-spacing:.14em; text-transform:uppercase; }
+    .intro { max-width:22rem; margin:0 auto 1.7rem; color:#555650; font-size:1rem; line-height:1.65; }
+    .credentials { margin:0 0 1.75rem; padding:1.15rem .8rem; border-block:1px solid var(--line); }
+    .credentials span { display:block; margin-bottom:.45rem; color:#94948e; font-size:.67rem; font-weight:700; letter-spacing:.16em; text-transform:uppercase; }
+    .credentials p { margin:0; font-family:Georgia,"Times New Roman",serif; font-size:.94rem; line-height:1.55; }
+    .actions { display:grid; gap:.75rem; }
+    .button { min-height:3.45rem; padding:.9rem 1.15rem; display:flex; align-items:center; justify-content:center; gap:.65rem; border:1px solid var(--line); border-radius:999px; color:var(--ink); background:#fff; text-decoration:none; font-size:.88rem; font-weight:650; transition:transform .18s ease,box-shadow .18s ease,background .18s ease; }
+    .button.primary { color:#fff; background:var(--ink); border-color:var(--ink); box-shadow:0 .8rem 1.6rem rgba(25,26,24,.15); }
+    .button svg { width:1.1rem; height:1.1rem; flex:0 0 auto; }
+    .button:active { transform:scale(.985); }
+    .secondary { display:grid; grid-template-columns:1fr 1fr; gap:.75rem; }
+    footer { margin-top:1.35rem; color:#a09f99; font-size:.66rem; letter-spacing:.12em; text-transform:uppercase; }
+    :focus-visible { outline:3px solid rgba(216,107,50,.38); outline-offset:3px; }
+    @media (min-width:38rem) { main{padding:3rem 1.5rem}.card{padding:3rem 2.5rem 1.6rem}.button:hover{transform:translateY(-2px);box-shadow:0 .65rem 1.4rem rgba(25,26,24,.09)}.button.primary:hover{background:#30312e} }
+    @media (prefers-reduced-motion:reduce) { .button{transition:none} }
   </style>
 </head>
-
 <body>
-
-  <div class="card">
-    <h1>Nati</h1>
-    <p>Personal Trainer</p>
-  </div>
-
+  <main>
+    <article class="card" aria-labelledby="name">
+      <!-- Para actualizar la marca, reemplaza solamente assets/logo.svg. -->
+      <img class="logo" src="assets/logo.svg" alt="NATcoach — Healthy Training" width="360" height="150">
+      <p class="eyebrow">Entrenamiento personalizado</p>
+      <h1 id="name">Natalia Jara</h1>
+      <p class="role">Personal Trainer</p>
+      <p class="intro">Fuerza, técnica y bienestar a través de un entrenamiento diseñado para ti.</p>
+      <section class="credentials" aria-label="Certificaciones">
+        <span>Certificada en</span>
+        <p>Levantamiento Olímpico<br>Box Training System</p>
+      </section>
+      <nav class="actions" aria-label="Contacto">
+        <a class="button primary" href="https://wa.me/56944332127?text=Hola%20Nati%20%F0%9F%91%8B%20Vi%20tu%20contacto%20y%20me%20gustar%C3%ADa%20saber%20m%C3%A1s%20sobre%20tus%20entrenamientos%20personalizados." target="_blank" rel="noopener" aria-label="Hablar con Natalia por WhatsApp">
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 11.5a8 8 0 0 1-11.8 7L4 19.8l1.3-4A8 8 0 1 1 20 11.5Z"/><path d="M9 8.5c.4 2.5 2 4 4.5 4.8"/></svg>
+          Hablemos por WhatsApp
+        </a>
+        <div class="secondary">
+          <a class="button" href="natalia-jara.vcf" download>
+            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="3"/><path d="M6.5 19c.5-3 2.4-4.5 5.5-4.5s5 1.5 5.5 4.5"/></svg>
+            Guardar contacto
+          </a>
+          <a class="button" href="https://www.instagram.com/ncnatcoach/" target="_blank" rel="noopener" aria-label="Ver Instagram de NATcoach">
+            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="3.5"/><circle cx="17.5" cy="6.7" r=".7" fill="currentColor" stroke="none"/></svg>
+            Instagram
+          </a>
+        </div>
+      </nav>
+      <footer>NATcoach · Healthy Training</footer>
+    </article>
+  </main>
 </body>
 </html>

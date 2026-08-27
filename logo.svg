@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 150" role="img" aria-labelledby="title desc">
+  <title id="title">NATcoach</title>
+  <desc id="desc">Identidad temporal NATcoach Healthy Training</desc>
+  <rect width="360" height="150" fill="none"/>
+  <g fill="#191a18" text-anchor="middle">
+    <text x="180" y="80" font-family="Arial,Helvetica,sans-serif" font-size="55" font-weight="300" letter-spacing="-2">NAT<tspan fill="#d86b32" font-weight="700">coach</tspan></text>
+    <text x="180" y="111" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="600" letter-spacing="5">HEALTHY TRAINING</text>
+  </g>
+</svg>
